@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Agency FB Thin';
+  src: local('Agency FB'), url(../fonts/AgencyFB-Bold.ttf) format('truetype');
+}
+
+h1 {
+  font-family: Agency FB, Agency FB Thin, sans-serif;
+  color: #333;
+  text-transform: uppercase;
+  font-size: clamp(3rem, -3.3529rem + 17.6471vw, 9rem);
+}

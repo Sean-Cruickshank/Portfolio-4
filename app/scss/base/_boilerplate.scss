@@ -1,0 +1,15 @@
+html {
+  background: linear-gradient(180deg, #febd71 0px, lightblue 300px, lightblue 80%, #febd71 100%);
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: inter, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
