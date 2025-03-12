@@ -1,7 +1,9 @@
 html {
-  background: linear-gradient(180deg, #febd71 0px, lightblue 300px, lightblue 80%, #febd71 100%);
+  background-color: #010101;
+  // background: linear-gradient(180deg, #010101 0px, #010101 500px, #111 90%, rgb(159, 255, 215) 200%);
   box-sizing: border-box;
   font-size: 100%;
+  height: 1000px;
 }
 
 body {
@@ -12,4 +14,34 @@ body {
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.glowing {
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+  pointer-events: all;
+
+  &--blue {
+    @extend .glowing;
+    color: var(--blue);
+  }
+
+  &--green {
+    @extend .glowing;
+    color: var(--green);
+  }
+
+  &--purple {
+    @extend .glowing;
+    color: var(--purple);
+  }
+
+  &--yellow {
+    @extend .glowing;
+    color: var(--yellow);
+  }
 }

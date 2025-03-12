@@ -1,0 +1,38 @@
+.lightbulb {
+  margin-top: -22px;
+  margin-right: 5px;
+  border: none;
+  background: none;
+  font-size: 6rem;
+  color: #666;
+  transition: 0.2s;
+  transform: rotate(180deg);
+  cursor: pointer;
+  animation: wiggle 2s infinite;
+  position: relative;
+  z-index: 2;
+
+  &.active {
+    color: white;
+    animation: none;
+  }
+}
+
+.lightbulb:hover {
+  animation: none;
+  transform: rotate(180deg) scale(0.9);
+}
+
+.lightbulb:active {
+  transform: rotate(180deg) scale(0.8);
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(180deg); }
+ 70% { transform: rotate(180deg); }
+ 75% { transform: rotate(185deg); }
+ 80% { transform: rotate(175deg); }
+ 85% { transform: rotate(185deg); }
+ 95% { transform: rotate(175deg); }
+100% { transform: rotate(180deg); }
+}

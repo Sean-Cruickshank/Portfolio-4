@@ -5,8 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sean Cruickshank - Portfolio</title>
   <link rel="stylesheet" href="../dist/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
-  <h1>Sean Cruickshank</h1>
+  <main class="welcome">
+    <div class="lights">
+      <button class="lightbulb">
+        <i class="fa-solid fa-lightbulb"></i>
+      </button>
+      <div class="colour-picker">
+        <button class="colour-picker--blue colour-picker-active">
+          <i class="fa-solid fa-circle"></i> 
+        </button>
+        <button class="colour-picker--green">
+          <i class="fa-solid fa-circle"></i>
+        </button>
+        <button class="colour-picker--purple">
+          <i class="fa-solid fa-circle"></i>
+        </button>
+        <button class="colour-picker--yellow">
+          <i class="fa-solid fa-circle"></i>
+        </button>
+      </div>
+
+    </div>
+    <h1 class="welcome__title">Sean Cruickshank</h1>
+    <h2 class="welcome__subtitle">Web Developer.</h2>
+    
+    <div class="social">
+      <a href="https://github.com/Sean-Cruickshank" target="_blank">
+        <i class="social__github fa-brands fa-github"></i>
+      </a>
+      
+      <a href="https://www.linkedin.com/in/seancruickshank/" target="_blank">
+        <i class="social__linkedin fa-brands fa-linkedin"></i>
+      </a>
+      
+    </div>
+    <i class="welcome__arrow fa-solid fa-chevron-down"></i>
+  </main>
+
+  <div class="skills">
+    <h2>Skills</h2>
+    <i class="fab fa-html5"></i>
+    <i class="fab fa-css3"></i>
+    <i class="fa-brands fa-js"></i>
+    <i class="fa-brands fa-react"></i>
+  </div>
+
+  <script type="module" src="./index.js"></script>
 </body>
 </html>

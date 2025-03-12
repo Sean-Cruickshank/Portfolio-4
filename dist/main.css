@@ -1,7 +1,8 @@
 html {
-  background: linear-gradient(180deg, #febd71 0px, lightblue 300px, lightblue 80%, #febd71 100%);
+  background-color: #010101;
   box-sizing: border-box;
   font-size: 100%;
+  height: 1000px;
 }
 
 body {
@@ -14,13 +15,192 @@ body {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
+.glowing, .glowing--yellow, .glowing--purple, .glowing--green, .glowing--blue {
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+  pointer-events: all;
+}
+.glowing--blue {
+  color: var(--blue);
+}
+.glowing--green {
+  color: var(--green);
+}
+.glowing--purple {
+  color: var(--purple);
+}
+.glowing--yellow {
+  color: var(--yellow);
+}
+
 @font-face {
   font-family: "Agency FB Thin";
   src: local("Agency FB"), url(../fonts/AgencyFB-Bold.ttf) format("truetype");
 }
 h1 {
   font-family: Agency FB, Agency FB Thin, sans-serif;
-  color: #333;
+  color: #080808;
   text-transform: uppercase;
+}
+
+h2, h3 {
+  font-family: Agency FB, Agency FB Thin, sans-serif;
+  color: #010101;
+}
+
+.lightbulb {
+  margin-top: -22px;
+  margin-right: 5px;
+  border: none;
+  background: none;
+  font-size: 6rem;
+  color: #666;
+  transition: 0.2s;
+  transform: rotate(180deg);
+  cursor: pointer;
+  animation: wiggle 2s infinite;
+  position: relative;
+  z-index: 2;
+}
+.lightbulb.active {
+  color: white;
+  animation: none;
+}
+
+.lightbulb:hover {
+  animation: none;
+  transform: rotate(180deg) scale(0.9);
+}
+
+.lightbulb:active {
+  transform: rotate(180deg) scale(0.8);
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(180deg);
+  }
+  70% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(185deg);
+  }
+  80% {
+    transform: rotate(175deg);
+  }
+  85% {
+    transform: rotate(185deg);
+  }
+  95% {
+    transform: rotate(175deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.welcome__title {
   font-size: clamp(3rem, -3.3529rem + 17.6471vw, 9rem);
+  line-height: 80%;
+  margin-top: 25px;
+  margin-bottom: 0;
+  transition: 0.2s;
+}
+.welcome__subtitle {
+  font-size: clamp(1.5rem, -1.1471rem + 7.3529vw, 4rem);
+  margin-bottom: 50px;
+  transition: 0.2s;
+}
+.welcome__arrow {
+  color: #010101;
+  font-size: 4rem;
+}
+.welcome__arrow.glowing {
+  color: white;
+  transform: translateY(100%);
+}
+
+.social {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 6rem;
+  margin-top: 50px;
+  transition: 0.2s;
+}
+.social__github:hover {
+  transform: scale(0.9);
+}
+.social__linkedin:hover {
+  transform: scale(0.9);
+}
+
+.social a {
+  pointer-events: none;
+  color: #010101;
+}
+
+.colour-picker-active i {
+  text-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+.lights {
+  position: relative;
+  width: 100%;
+}
+
+.colour-picker {
+  display: grid;
+  grid-template-columns: 1fr 10fr 10fr 1fr;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  transition: 0.4s;
+  z-index: 1;
+  overflow: hidden;
+}
+.colour-picker--blue {
+  color: var(--blue);
+}
+.colour-picker--green {
+  color: var(--green);
+}
+.colour-picker--purple {
+  color: var(--purple);
+}
+.colour-picker--yellow {
+  color: var(--yellow);
+}
+.colour-picker.active {
+  width: 50%;
+}
+
+.colour-picker button {
+  border: none;
+  background: none;
+  width: 50px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  cursor: pointer;
+}
+
+:root {
+  --blue: rgb(159, 255, 215);
+  --green: rgb(178, 255, 159);
+  --purple: rgb(255, 159, 229);
+  --yellow: rgb(253, 255, 159);
 }/*# sourceMappingURL=main.css.map */
