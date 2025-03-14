@@ -1,6 +1,5 @@
 .skills {
   flex-direction: column;
-  background-color: #111;
   text-align: center;
 
   &__row-one, &__row-two, &__row-three {
@@ -13,9 +12,5 @@
   &__row-one i, &__row-two i, &__row-three i {
     font-size: 3rem;
     margin: 0px 15px;
-  }
-
-  &__icon {
-    
   }
 }
