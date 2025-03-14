@@ -6,8 +6,16 @@
   <title>Sean Cruickshank - Portfolio</title>
   <link rel="stylesheet" href="../dist/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
+  <nav class="sidenav hidden">
+    <a class="sidenav__welcome sidenav--active">Welcome</a>
+    <a class="sidenav__skills">Skills</a>
+    <a class="sidenav__timeline">Timeline</a>
+    <a class="sidenav__about">About Me</a>
+    <a class="sidenav__contact">Contact</a>
+  </nav>
   <main class="welcome">
     <div class="lights">
       <button class="lightbulb">
@@ -46,13 +54,29 @@
   </main>
 
   <div class="skills">
-    <h2>Skills</h2>
-    <i class="fab fa-html5"></i>
-    <i class="fab fa-css3"></i>
-    <i class="fa-brands fa-js"></i>
-    <i class="fa-brands fa-react"></i>
+    <h2 class="heading">Skills</h2>
+    <div class="skills__row-one">
+    </div>
+    <div class="skills__row-two">
+    </div>
+    <div class="skills__row-three">
+    </div>
+    
   </div>
 
-  <script type="module" src="./index.js"></script>
+  <div class="timeline hidden">
+
+  </div>
+
+  <div class="about hidden">
+
+  </div>
+
+  <div class="contact hidden">
+
+  </div>
+
+  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/skills.js"></script>
 </body>
 </html>

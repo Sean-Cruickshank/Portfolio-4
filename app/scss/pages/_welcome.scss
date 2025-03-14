@@ -1,9 +1,11 @@
 .welcome {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 600px;
+  height: 100vh;
+  margin-top: 0;
 
   &__title {
     font-size: clamp(3rem, -3.3529rem + 17.6471vw, 9rem);
@@ -23,8 +25,10 @@
     color: #010101;
     font-size: 4rem;
 
-    &.glowing {
+    &.active {
       color: white;
+      text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+      transition: 0.5s;
       transform: translateY(100%);
     }
   }
