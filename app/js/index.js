@@ -164,7 +164,7 @@ document.querySelector('.lightbulb').addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
   const position = Math.floor(scrollY);
-  console.log(position)
+  // console.log(position)
   
   // Reveals the sidenav when the user scrolls more than 25px down
   if (position > 25) {

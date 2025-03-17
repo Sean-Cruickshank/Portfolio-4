@@ -1,4 +1,23 @@
 .projects {
   height: 200px;
   background-color: green;
+
+  &__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 80px;
+  }
+
+  &__info {
+    background-color: red;
+    margin: 0;
+  }
+
+  &__image {
+    background-color: blue;
+  }
+
+  &__image img {
+    width: 100px;
+  }
 }
