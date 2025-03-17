@@ -3,7 +3,8 @@ html {
   // background: linear-gradient(180deg, #010101 0px, #010101 500px, #111 90%, rgb(159, 255, 215) 200%);
   box-sizing: border-box;
   font-size: 100%;
-  min-height: 101%;
+  // min-height: 101%;
+  height: 5000px;
 }
 
 body {
@@ -14,10 +15,6 @@ body {
 
 *, *::before, *::after {
   box-sizing: inherit;
-}
-
-a {
-  text-decoration: none;
 }
 
 .glowing {
@@ -48,4 +45,10 @@ a {
 
 .hidden {
   display: none !important;
+}
+
+.section {
+  text-align: center;
+  width: 65%;
+  margin-inline: auto;
 }

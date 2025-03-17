@@ -36,3 +36,5 @@ skillsData.forEach((skill) => {
 skillsRowOne.innerHTML = skillsRowOneHTML
 skillsRowTwo.innerHTML = skillsRowTwoHTML
 skillsRowThree.innerHTML = skillsRowThreeHTML
+
+

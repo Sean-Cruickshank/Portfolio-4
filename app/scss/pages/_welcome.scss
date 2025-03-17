@@ -26,10 +26,11 @@
     font-size: 4rem;
 
     &.active {
-      color: white;
       text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+      color: white;
       transition: 0.5s;
       transform: translateY(100%);
+      cursor: pointer;
     }
   }
 }

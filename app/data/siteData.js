@@ -14,15 +14,18 @@ export const colourList = ['blue', 'green', 'purple', 'yellow']
 export const glowingArray = [
   '.welcome__title',
   '.welcome__subtitle',
+  '.welcome__arrow',
   '.social__github',
   '.social__linkedin',
-  '.welcome__arrow'
+  '.about__button',
+  '.test'
 ]
 
 // All multi-use classes that should receive the '.glowing' class and respective colour theme
 // ie the ones using querySelectorAll
 export const glowingArrayAll = [
   '.heading',
+  '.paragraph',
   '.skills__icon',
   '.skills__description'
 ]
@@ -34,26 +37,31 @@ export const sideNavArray =
   {
     class: '.sidenav__welcome',
     top: 0,
-    bottom: 500
-  },
-  {
-    class: '.sidenav__skills',
-    top: 500,
-    bottom: 700
-  },
-  {
-    class: '.sidenav__timeline',
-    top: 700,
-    bottom: 900
+    bottom: 760
   },
   {
     class: '.sidenav__about',
-    top: 900,
-    bottom: 1100
+    top: 760,
+    bottom: 1320
+  },
+  {
+    class: '.sidenav__skills',
+    top: 1320,
+    bottom: 1700
+  },
+  {
+    class: '.sidenav__projects',
+    top: 1700,
+    bottom: 2200
+  },
+  {
+    class: '.sidenav__qualifications',
+    top: 2200,
+    bottom: 2700
   },
   {
     class: '.sidenav__contact',
-    top: 1100,
+    top: 2700,
     bottom: 9999
   }
 ]

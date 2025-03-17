@@ -1,16 +1,33 @@
 .skills {
-  flex-direction: column;
-  text-align: center;
+  min-height: 600px;
 
   &__row-one, &__row-two, &__row-three {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
   }
 
   &__row-one i, &__row-two i, &__row-three i {
-    font-size: 3rem;
-    margin: 0px 15px;
+    font-size: 2.4rem;
+    margin: 0px 10px;
   }
+
+  &__description {
+    font-size: 1rem;
+  }
+
+  &__heading {
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
 }

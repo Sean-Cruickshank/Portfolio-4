@@ -1,10 +1,9 @@
 import { colourList, sideNavArray, glowingArray, subtitleArray, glowingArrayAll } from "../data/siteData.js"
 
 // Creates the onClick scroll functionality for the sidenav links
-// Scroll is set to the top breakpoint + 10 so that the 'sidenav--active' class doesn't trigger so late
 sideNavArray.forEach((page) => {
   document.querySelector(page.class).addEventListener('click', () => {
-    window.scrollTo({top: (page.top + 10), behavior: 'smooth'})
+    window.scrollTo({top: (page.top), behavior: 'smooth'})
   })
 })
 
@@ -46,7 +45,12 @@ colourList.forEach((colour) => {
       document.querySelectorAll(element).forEach((icon) => {
         icon.classList.add(`glowing--${colourVal}`)
       })
-    })  
+    }) 
+
+    // Replaces the colour theme for buttons
+    document.querySelectorAll('.button').forEach((button) => {
+      button.style.backgroundColor = `var(--${colourVal}`
+    })
   })
 })
 
@@ -65,11 +69,12 @@ function triggerLightbulb() {
     // Only applies from the second activation onwards
     if (lightbulbFirstTrigger) {
       subtitle.innerHTML = subtitleArray[s]
-    // Also reveals the 'skills', 'timeline', etc. when the lightbulb is pressed for the first time
+    // Also reveals the 'skills', 'projects', etc. when the lightbulb is pressed for the first time
     } else {
       lightbulbFirstTrigger = true
       document.querySelector('.skills').classList.remove('hidden')
-      document.querySelector('.timeline').classList.remove('hidden')
+      document.querySelector('.projects').classList.remove('hidden')
+      document.querySelector('.qualifications').classList.remove('hidden')
       document.querySelector('.about').classList.remove('hidden')
       document.querySelector('.contact').classList.remove('hidden')
     }
@@ -118,6 +123,11 @@ function triggerLightbulb() {
     document.querySelector('.lightbulb').classList.add('active')
     document.querySelector('.colour-picker').classList.add('active')
 
+    // Reveals buttons when lightbulb is turned on
+    document.querySelectorAll('.button').forEach((button) => {
+      button.classList.remove('hidden')
+    })
+
     // When the light is turned off
   } else {
     // Removes the "glowing" effect from all single-use classes
@@ -139,6 +149,11 @@ function triggerLightbulb() {
     document.querySelector('.lightbulb').classList.remove('active')
     document.querySelector('.colour-picker').classList.remove('active')
     document.querySelector('.welcome__arrow').classList.remove('active')
+
+    // Hides buttons when lightbulb is turned off
+    document.querySelectorAll('.button').forEach((button) => {
+      button.classList.add('hidden')
+    })
   }
 }
 
@@ -149,7 +164,7 @@ document.querySelector('.lightbulb').addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
   const position = Math.floor(scrollY);
-  // console.log(position)
+  console.log(position)
   
   // Reveals the sidenav when the user scrolls more than 25px down
   if (position > 25) {
@@ -157,12 +172,26 @@ window.addEventListener('scroll', () => {
   }
 
   // Sets the breakpoints for the 'sidenav--active' class for each sidenav link
+  // Scroll is set to the top/bottom breakpoint - 10 so that the 'sidenav--active' class doesn't trigger so late
   sideNavArray.forEach((page) => {
-    if (position >= page.top & position < page.bottom) {
+    if (position >= page.top -10 & position < page.bottom - 10) {
       document.querySelectorAll('.sidenav--active').forEach((item) => {
         item.classList.remove('sidenav--active')
       })
       document.querySelector(page.class).classList.add('sidenav--active')
     }
   })
+
+  // Fade in effect for the three rows of skill icons
+  if (position > 860) {
+    setTimeout(() => {
+      document.querySelector('.skills__row-one').classList.remove('hidden')
+    },250)
+    setTimeout(() => {
+      document.querySelector('.skills__row-two').classList.remove('hidden')
+    },500)
+    setTimeout(() => {
+      document.querySelector('.skills__row-three').classList.remove('hidden')
+    },750)
+  }
 })

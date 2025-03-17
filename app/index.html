@@ -9,13 +9,16 @@
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
+
   <nav class="sidenav hidden">
     <a class="sidenav__welcome sidenav--active">Welcome</a>
-    <a class="sidenav__skills">Skills</a>
-    <a class="sidenav__timeline">Timeline</a>
     <a class="sidenav__about">About Me</a>
+    <a class="sidenav__skills">Skills</a>
+    <a class="sidenav__projects">Projects</a>
+    <a class="sidenav__qualifications">Qualifications</a>
     <a class="sidenav__contact">Contact</a>
   </nav>
+
   <main class="welcome">
     <div class="lights">
       <button class="lightbulb">
@@ -51,32 +54,45 @@
       
     </div>
     <i class="welcome__arrow fa-solid fa-chevron-down"></i>
+    <i class="test"></i>
   </main>
 
-  <div class="skills hidden">
+  <div class="about section hidden">
+    <h2 class="heading">Hey There!</h2>
+    <p class="paragraph">I'm Sean, an IT Graduate and Web Developer based in Auckland, New Zealand</p>
+    <p class="paragraph">This is my space for developing and showcasing my skills in software development.</p>
+    <button class="about__button button">More about me</button>
+    <div class="about__facts">
+      <h3 class="heading hidden">Me Fact!</h3>
+      <p class="paragraph me-fact hidden"></p>
+    </div>
+  </div>
+
+  <div class="skills section hidden">
     <h2 class="heading">Skills</h2>
-    <div class="skills__row-one">
+    <div class="skills__row-one hidden">
     </div>
-    <div class="skills__row-two">
+    <div class="skills__row-two hidden">
     </div>
-    <div class="skills__row-three">
+    <div class="skills__row-three hidden">
     </div>
+  </div>
+
+  <div class="projects section hidden">
     
   </div>
 
-  <div class="timeline hidden">
+  <div class="qualifications section hidden">
 
   </div>
 
-  <div class="about hidden">
-
-  </div>
-
-  <div class="contact hidden">
+  <div class="contact section hidden">
 
   </div>
 
   <script type="module" src="./js/index.js"></script>
   <script type="module" src="./js/skills.js"></script>
+  <script type="module" src="./js/about.js"></script>
+  <script type="module" src="./js/welcome.js"></script>
 </body>
 </html>

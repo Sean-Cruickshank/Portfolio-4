@@ -1,4 +1,11 @@
 .about {
-  background-color: blue;
-  height: 200px;
+  text-align: center;
+  margin-inline: auto;
+  min-height: 500px;
+}
+
+.about__facts i {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
 }
