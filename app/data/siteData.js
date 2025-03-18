@@ -1,7 +1,7 @@
 // Array of alternate subtitles
 export const subtitleArray = [
   "I hope I remembered to pay the power bill",
-  "I wonder how this looks in light mode?",
+  "I hope this looks okay in light mode...",
   "Why is it so dark in here?",
   "Can you please leave that on?"
 ]
@@ -17,8 +17,7 @@ export const glowingArray = [
   '.welcome__arrow',
   '.social__github',
   '.social__linkedin',
-  '.about__button',
-  '.test'
+  '.about__button'
 ]
 
 // All multi-use classes that should receive the '.glowing' class and respective colour theme
@@ -27,7 +26,9 @@ export const glowingArrayAll = [
   '.heading',
   '.paragraph',
   '.skills__icon',
-  '.skills__description'
+  '.skills__description',
+  '.projects__icon',
+  '.projects__link'
 ]
 
 // Array of all sidenav links
