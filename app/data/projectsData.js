@@ -17,7 +17,7 @@ export const projectData = [
   },
   {
     title: "Tile Game",
-    link: "www.coolspacefacts.com",
+    link: "/app/tilegame.html",
     date: "2024",
     image: "./images/tile_game.png",
     tagsText: [
