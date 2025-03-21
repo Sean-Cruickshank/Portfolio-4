@@ -21,7 +21,7 @@
 
   <main class="welcome">
     <div class="lights">
-      <button class="lightbulb">
+      <button id="welcome" class="lightbulb">
         <i class="fa-solid fa-lightbulb"></i>
       </button>
       <div class="colour-picker">
@@ -58,7 +58,7 @@
   </main>
 
   <div class="about section hidden">
-    <h2 class="heading">Hey There!</h2>
+    <h2 id="about" class="heading">Hey There!</h2>
     <p class="paragraph">I'm Sean, an IT Graduate and Web Developer based in Auckland, New Zealand</p>
     <p class="paragraph">I am currently on the hunt for new work so I can grow, learn, and meet new people!</p>
     <p class="paragraph">This is my space for developing and showcasing my skills in software development.</p>
@@ -70,7 +70,7 @@
   </div>
 
   <div class="skills section hidden">
-    <h2 class="heading">Tech Stack</h2>
+    <h2 id="skills" class="heading">Tech Stack</h2>
     <p class="paragraph">I am primarily focused on Front-end Development, and most of my projects have focused heavily on either React or vanilla JavaScript.</p>
     <p class="paragraph">However, I would like to branch out more as my career develops. I recently (March 2025) completed my Azure Fundamentals certification, and would like to expand on this further in the near future!</p>
     <div class="skills__row-one hidden">
@@ -82,24 +82,59 @@
   </div>
 
   <div class="projects section hidden">
-    <h2 class="heading">Projects</h2>
+    <h2 id="projects" class="heading">Projects</h2>
     <div class="projects__list">
 
     </div>
   </div>
 
   <div class="qualifications section hidden">
+    <h2 id="qualifications" class="heading">Qualifications</h2>
+    <div class="qualifications__list">
 
+    </div>
   </div>
 
   <div class="contact section hidden">
-
+    <h2 id="contact" class="heading">Get in Touch!</h2>
+    <p class="paragraph">If you would like to get in touch with me for any reason, I can be reached by any of the following!</p>
+    <div class="contact__list">
+      <a
+        href="https://github.com/Sean-Cruickshank"
+        target="_blank"
+        title="GitHub">
+        <i class="contact__icon fa-brands fa-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/seancruickshank/"
+        target="_blank"
+        title="LinkedIn">
+        <i class="contact__icon fa-brands fa-linkedin"></i>
+      </a>
+      <a
+        href="https://www.facebook.com/SeanCruickshank1997/"
+        target="_blank"
+        title="Facebook">
+        <i class="contact__icon fa-brands fa-facebook"></i>
+      </a>
+      <a
+        href="mailto:seancruickshank2025@gmail.com"
+        target="_blank"
+        title="Email: seancruickshank2025@gmail.com">
+        <i class="contact__icon fa fa-envelope"></i>
+      </a>
+    </div>
   </div>
+
+  <footer class="footer hidden section">
+    <i class="paragraph">Website created by Sean Cruickshank © 2025</i>
+  </footer>
 
   <script type="module" src="./js/index.js"></script>
   <script type="module" src="./js/skills.js"></script>
   <script type="module" src="./js/about.js"></script>
   <script type="module" src="./js/welcome.js"></script>
   <script type="module" src="./js/projects.js"></script>
+  <script type="module" src="./js/qualifications.js"></script>
 </body>
 </html>

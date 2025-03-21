@@ -13,17 +13,20 @@
     margin-top: 25px;
     margin-bottom: 0;
     transition: 0.2s;
+    opacity: 0;
   }
 
   &__subtitle {
     font-size: clamp(1.5rem, -1.1471rem + 7.3529vw, 4rem);
     margin-bottom: 50px;
     transition: 0.2s;
+    opacity: 0;
   }
 
   &__arrow {
     color: #010101;
-    font-size: 4rem;
+    font-size: clamp(3rem, 1.9412rem + 2.9412vw, 4rem);
+    opacity: 0;
 
     &.active {
       text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
@@ -31,6 +34,7 @@
       transition: 0.5s;
       transform: translateY(100%);
       cursor: pointer;
+      opacity: 1;
     }
   }
 }
@@ -40,7 +44,7 @@
   flex-flow: row no-wrap;
   justify-content: space-evenly;
   width: 100%;
-  font-size: 6rem;
+  font-size: clamp(4rem, -0.2353rem + 11.7647vw, 8rem);
   margin-top: 50px;
   transition: 0.2s;
 
@@ -56,6 +60,10 @@
 .social a {
   pointer-events: none;
   color: #010101;
+}
+
+.social i {
+  opacity: 0;
 }
 
 .colour-picker-active i {

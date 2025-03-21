@@ -29,7 +29,7 @@ projectData.forEach((project) => {
       <div class="projects__icons">
       ${projectListTags}
       </div>
-      <img src=${project.image} />
+      <img class="projects__image" src=${project.image} />
     </div>
   `
 })

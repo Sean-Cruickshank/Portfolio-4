@@ -38,8 +38,13 @@
   margin-bottom: 10px;
   font-family: Agency FB, Agency FB Thin, sans-serif;
   font-weight: 900;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 0.9882rem + 0.5882vw, 1.4rem);
   cursor: pointer;
+}
+
+.sidenav a:hover {
+  transform: scale(0.95);
+  opacity: 0.8;
 }
 
 @keyframes fadeIn {

@@ -1,6 +1,6 @@
 html {
   background-color: #010101;
-  // background: linear-gradient(180deg, #010101 0px, #010101 500px, #111 90%, rgb(159, 255, 215) 200%);
+  // background: linear-gradient(0deg, #010101 0px, #010101 500px, #111 90%, white 200%);
   box-sizing: border-box;
   font-size: 100%;
   min-height: 101%;
@@ -21,6 +21,7 @@ body {
   text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
   transition: 0.5s;
   pointer-events: all;
+  opacity: 1 !important;
 
   &--blue {
     @extend .glowing;

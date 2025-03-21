@@ -12,12 +12,12 @@
   }
 
   &__row-one i, &__row-two i, &__row-three i {
-    font-size: 2.4rem;
+    font-size: clamp(2rem, 0.9412rem + 2.9412vw, 3rem);
     margin: 0px 10px;
   }
 
   &__description {
-    font-size: 1rem;
+    font-size: clamp(1rem, 0.5765rem + 1.1765vw, 1.4rem);
   }
 
   &__heading {

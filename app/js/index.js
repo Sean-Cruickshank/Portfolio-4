@@ -3,7 +3,7 @@ import { colourList, sideNavArray, glowingArray, subtitleArray, glowingArrayAll 
 // Creates the onClick scroll functionality for the sidenav links
 sideNavArray.forEach((page) => {
   document.querySelector(page.class).addEventListener('click', () => {
-    window.scrollTo({top: (page.top), behavior: 'smooth'})
+    document.getElementById(page.id).scrollIntoView({behavior: "smooth"})
   })
 })
 
@@ -45,7 +45,12 @@ colourList.forEach((colour) => {
       document.querySelectorAll(element).forEach((icon) => {
         icon.classList.add(`glowing--${colourVal}`)
       })
-    }) 
+    })
+
+    // Adds the theme colour to image borders
+    document.querySelectorAll('.projects__image').forEach((image) => {
+    image.style.border = `3px solid var(--${colourVal})`
+    })
 
     // Replaces the colour theme for buttons
     document.querySelectorAll('.button').forEach((button) => {
@@ -77,6 +82,7 @@ function triggerLightbulb() {
       document.querySelector('.qualifications').classList.remove('hidden')
       document.querySelector('.about').classList.remove('hidden')
       document.querySelector('.contact').classList.remove('hidden')
+      document.querySelector('.footer').classList.remove('hidden')
     }
 
     //Applies the "glowing" effect when the light is turned on
@@ -119,13 +125,18 @@ function triggerLightbulb() {
       })
     })
 
+    // Adds the theme colour to image borders
+    document.querySelectorAll('.projects__image').forEach((image) => {
+      image.style.border = `2px solid var(--${colourVal})`
+    })
+
     // Also activates the lightbulb and colour picker
     document.querySelector('.lightbulb').classList.add('active')
     document.querySelector('.colour-picker').classList.add('active')
 
-    // Reveals buttons when lightbulb is turned on
-    document.querySelectorAll('.button').forEach((button) => {
-      button.classList.remove('hidden')
+    // Reveals sections when lightbulb is turned on
+    document.querySelectorAll('.section').forEach((section) => {
+      section.classList.remove('hidden')
     })
 
     // When the light is turned off
@@ -150,9 +161,9 @@ function triggerLightbulb() {
     document.querySelector('.colour-picker').classList.remove('active')
     document.querySelector('.welcome__arrow').classList.remove('active')
 
-    // Hides buttons when lightbulb is turned off
-    document.querySelectorAll('.button').forEach((button) => {
-      button.classList.add('hidden')
+    // Hides sections when lightbulb is turned off
+    document.querySelectorAll('.section').forEach((section) => {
+      section.classList.add('hidden')
     })
   }
 }
@@ -164,7 +175,7 @@ document.querySelector('.lightbulb').addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
   const position = Math.floor(scrollY);
-  // console.log(position)
+  console.log(position)
   
   // Reveals the sidenav when the user scrolls more than 25px down
   if (position > 25) {
@@ -172,9 +183,8 @@ window.addEventListener('scroll', () => {
   }
 
   // Sets the breakpoints for the 'sidenav--active' class for each sidenav link
-  // Scroll is set to the top/bottom breakpoint - 10 so that the 'sidenav--active' class doesn't trigger so late
   sideNavArray.forEach((page) => {
-    if (position >= page.top -10 & position < page.bottom - 10) {
+    if (position >= page.top - 250 & position < page.bottom - 250) {
       document.querySelectorAll('.sidenav--active').forEach((item) => {
         item.classList.remove('sidenav--active')
       })
@@ -183,7 +193,7 @@ window.addEventListener('scroll', () => {
   })
 
   // Fade in effect for the three rows of skill icons
-  if (position > 860) {
+  if (position > 1180) {
     setTimeout(() => {
       document.querySelector('.skills__row-one').classList.remove('hidden')
     },250)

@@ -1,4 +1,21 @@
 .contact {
-  background-color: orange;
-  height: 200px;
+
+  &__list {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin-inline: auto;
+  }
+
+  &__icon {
+    font-size: clamp(2rem, -0.6471rem + 7.3529vw, 4.5rem);
+  }
+
+  &__icon:hover {
+    transform: scale(0.9);
+  }
+}
+
+.contact .paragraph {
+  margin-bottom: 80px;
 }

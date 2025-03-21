@@ -19,6 +19,7 @@ body {
   text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
   transition: 0.5s;
   pointer-events: all;
+  opacity: 1 !important;
 }
 .glowing--blue {
   color: var(--blue);
@@ -65,12 +66,12 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 0.8824rem + 5.8824vw, 5rem);
   margin-bottom: 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, -0.0882rem + 4.4118vw, 3rem);
 }
 
 a {
@@ -78,7 +79,7 @@ a {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 0.5765rem + 1.1765vw, 1.4rem);
   font-family: sans-serif;
   font-weight: lighter;
   text-shadow: none !important;
@@ -91,7 +92,7 @@ p {
   color: black;
   padding: 4px 10px;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 0.4559rem + 2.2059vw, 2rem);
   font-family: Agency FB, Agency FB Thin, sans-serif;
   font-weight: bold;
   transition: 0.2s;
@@ -111,7 +112,7 @@ p {
   margin-right: 5px;
   border: none;
   background: none;
-  font-size: 6rem;
+  font-size: clamp(5rem, 3.9412rem + 2.9412vw, 6rem);
   color: #666;
   transition: 0.2s;
   transform: rotate(180deg);
@@ -198,8 +199,13 @@ p {
   margin-bottom: 10px;
   font-family: Agency FB, Agency FB Thin, sans-serif;
   font-weight: 900;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 0.9882rem + 0.5882vw, 1.4rem);
   cursor: pointer;
+}
+
+.sidenav a:hover {
+  transform: scale(0.95);
+  opacity: 0.8;
 }
 
 @keyframes fadeIn {
@@ -225,15 +231,18 @@ p {
   margin-top: 25px;
   margin-bottom: 0;
   transition: 0.2s;
+  opacity: 0;
 }
 .welcome__subtitle {
   font-size: clamp(1.5rem, -1.1471rem + 7.3529vw, 4rem);
   margin-bottom: 50px;
   transition: 0.2s;
+  opacity: 0;
 }
 .welcome__arrow {
   color: #010101;
-  font-size: 4rem;
+  font-size: clamp(3rem, 1.9412rem + 2.9412vw, 4rem);
+  opacity: 0;
 }
 .welcome__arrow.active {
   text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
@@ -241,6 +250,7 @@ p {
   transition: 0.5s;
   transform: translateY(100%);
   cursor: pointer;
+  opacity: 1;
 }
 
 .social {
@@ -248,7 +258,7 @@ p {
   flex-flow: row no-wrap;
   justify-content: space-evenly;
   width: 100%;
-  font-size: 6rem;
+  font-size: clamp(4rem, -0.2353rem + 11.7647vw, 8rem);
   margin-top: 50px;
   transition: 0.2s;
 }
@@ -262,6 +272,10 @@ p {
 .social a {
   pointer-events: none;
   color: #010101;
+}
+
+.social i {
+  opacity: 0;
 }
 
 .colour-picker-active i {
@@ -335,11 +349,11 @@ p {
   animation-iteration-count: 1;
 }
 .skills__row-one i, .skills__row-two i, .skills__row-three i {
-  font-size: 2.4rem;
+  font-size: clamp(2rem, 0.9412rem + 2.9412vw, 3rem);
   margin: 0px 10px;
 }
 .skills__description {
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.5765rem + 1.1765vw, 1.4rem);
 }
 .skills__heading {
   animation: fadeIn;
@@ -363,6 +377,7 @@ p {
 }
 .projects__card img {
   width: 300px;
+  border: solid 1px white;
 }
 .projects__title {
   display: flex;
@@ -386,10 +401,45 @@ p {
   margin-bottom: 30px;
 }
 .projects__icon {
-  font-size: 2.4rem;
+  font-size: clamp(2rem, 0.9412rem + 2.9412vw, 3rem);
 }
 
-.contact {
-  background-color: orange;
-  height: 200px;
+.qualifications {
+  margin-bottom: 50px;
+}
+.qualifications__list h3 {
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+.qualifications__list p {
+  margin: 0 auto;
+}
+.contact__list {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  margin-inline: auto;
+}
+.contact__icon {
+  font-size: clamp(2rem, -0.6471rem + 7.3529vw, 4.5rem);
+}
+.contact__icon:hover {
+  transform: scale(0.9);
+}
+
+.contact .paragraph {
+  margin-bottom: 80px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  min-height: 240px;
+}
+
+.footer i {
+  margin-bottom: 25px;
+  width: -moz-max-content;
+  width: max-content;
 }/*# sourceMappingURL=main.css.map */

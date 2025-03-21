@@ -16,12 +16,12 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 0.8824rem + 5.8824vw, 5rem);
   margin-bottom: 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, -0.0882rem + 4.4118vw, 3rem);
 }
 
 a {
@@ -29,7 +29,7 @@ a {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 0.5765rem + 1.1765vw, 1.4rem);
   font-family: sans-serif;
   font-weight: lighter;
   text-shadow: none !important;

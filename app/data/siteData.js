@@ -28,7 +28,8 @@ export const glowingArrayAll = [
   '.skills__icon',
   '.skills__description',
   '.projects__icon',
-  '.projects__link'
+  '.projects__link',
+  '.contact__icon'
 ]
 
 // Array of all sidenav links
@@ -36,33 +37,39 @@ export const glowingArrayAll = [
 export const sideNavArray =
 [
   {
+    id: 'welcome',
     class: '.sidenav__welcome',
     top: 0,
-    bottom: 760
+    bottom: 776
   },
   {
+    id: 'about',
     class: '.sidenav__about',
-    top: 760,
-    bottom: 1320
+    top: 776,
+    bottom: 1329
   },
   {
+    id: 'skills',
     class: '.sidenav__skills',
-    top: 1320,
-    bottom: 1700
+    top: 1329,
+    bottom: 2067
   },
   {
+    id: 'projects',
     class: '.sidenav__projects',
-    top: 1700,
-    bottom: 2200
+    top: 2067,
+    bottom: 3549
   },
   {
+    id: 'qualifications',
     class: '.sidenav__qualifications',
-    top: 2200,
-    bottom: 2700
+    top: 3549,
+    bottom: 3802
   },
   {
+    id: 'contact',
     class: '.sidenav__contact',
-    top: 2700,
+    top: 3802,
     bottom: 9999
   }
 ]
