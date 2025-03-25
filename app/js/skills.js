@@ -11,21 +11,21 @@ let skillsRowThreeHTML = '';
 skillsData.forEach((skill) => {
   if (skill.row === 1) {
     skillsRowOneHTML+= `
-    <div>
+    <div class="skills__skill">
     <i class="${skill.icon} skills__icon"></i>
     <p class="skills__description">${skill.name}</p>
     </div>
   `
   } else if (skill.row === 2) {
     skillsRowTwoHTML+= `
-    <div>
+    <div class="skills__skill">
     <i class="${skill.icon} skills__icon"></i>
     <p class="skills__description">${skill.name}</p>
     </div>
   `
   } else if (skill.row === 3) {
     skillsRowThreeHTML+= `
-    <div>
+    <div class="skills__skill">
     <i class="${skill.icon} skills__icon"></i>
     <p class="skills__description">${skill.name}</p>
     </div>

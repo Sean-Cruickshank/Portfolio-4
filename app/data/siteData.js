@@ -58,18 +58,18 @@ export const sideNavArray =
     id: 'projects',
     class: '.sidenav__projects',
     top: 2067,
-    bottom: 3549
+    bottom: 3342
   },
   {
     id: 'qualifications',
     class: '.sidenav__qualifications',
-    top: 3549,
-    bottom: 3802
+    top: 3342,
+    bottom: 3875
   },
   {
     id: 'contact',
     class: '.sidenav__contact',
-    top: 3802,
+    top: 3875,
     bottom: 9999
   }
 ]

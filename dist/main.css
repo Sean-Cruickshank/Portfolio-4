@@ -16,7 +16,7 @@ body {
 }
 
 .glowing, .glowing--yellow, .glowing--purple, .glowing--green, .glowing--blue {
-  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.3);
   transition: 0.5s;
   pointer-events: all;
   opacity: 1 !important;
@@ -57,6 +57,7 @@ h1 {
   font-family: Agency FB, Agency FB Thin, sans-serif;
   color: #080808;
   text-transform: uppercase;
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5) !important;
 }
 
 h2, h3 {
@@ -175,9 +176,10 @@ p {
   animation: fadeIn;
   animation-duration: 1s;
   animation-iteration-count: 1;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
 }
 .sidenav--active {
-  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5), 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
   margin-left: 10px;
   color: var(--blue);
 }
@@ -312,16 +314,35 @@ p {
   color: var(--yellow);
 }
 .colour-picker.active {
-  width: 50%;
+  width: 80%;
+}
+@media (min-width: 576px) {
+  .colour-picker.active {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .colour-picker.active {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .colour-picker.active {
+    width: 50%;
+  }
 }
 
 .colour-picker button {
   border: none;
   background: none;
-  width: 50px;
+  width: 20px;
   aspect-ratio: 1;
   margin-inline: auto;
   cursor: pointer;
+}
+
+.colour-picker.active button {
+  width: 50px;
 }
 
 .about {
@@ -337,16 +358,31 @@ p {
 }
 
 .skills {
-  min-height: 600px;
+  min-height: 700px;
 }
 .skills__row-one, .skills__row-two, .skills__row-three {
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
   animation: fadeIn;
   animation-duration: 1s;
   animation-iteration-count: 1;
+}
+@media (min-width: 576px) {
+  .skills__row-one, .skills__row-two, .skills__row-three {
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .skills__row-one, .skills__row-two, .skills__row-three {
+    gap: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .skills__row-one, .skills__row-two, .skills__row-three {
+    gap: 20px;
+  }
 }
 .skills__row-one i, .skills__row-two i, .skills__row-three i {
   font-size: clamp(2rem, 0.9412rem + 2.9412vw, 3rem);
@@ -405,11 +441,14 @@ p {
 }
 
 .qualifications {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+}
+.qualifications__entry {
+  margin-bottom: 100px;
 }
 .qualifications__list h3 {
   text-decoration: underline;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .qualifications__list p {
   margin: 0 auto;

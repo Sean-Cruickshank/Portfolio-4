@@ -1,9 +1,13 @@
 .qualifications {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+
+  &__entry {
+    margin-bottom: 100px;
+  }
 
   &__list h3 {
     text-decoration: underline;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   &__list p {

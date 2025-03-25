@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -104,15 +106,32 @@
   }
 
   &.active {
-    width: 50%;
+    width: 80%;
+
+    @include u.breakpoint(small) {
+      width: 70%;
+    }
+
+    @include u.breakpoint(medium) {
+      width: 60%;
+    }
+
+    @include u.breakpoint(large) {
+      width: 50%;
+    }
   }
+
 }
 
 .colour-picker button {
   border: none;
   background: none;
-  width: 50px;
+  width: 20px;
   aspect-ratio: 1;
   margin-inline: auto;
   cursor: pointer;
+}
+
+.colour-picker.active button {
+  width: 50px;
 }
